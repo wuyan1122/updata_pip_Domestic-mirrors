@@ -7,4 +7,5 @@ Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN�
 
 #### 软件架构
 很简单的小脚本  设置pip.ini为国内镜像源 详情见源码
+exe 为pyinstaller封装 方便使用
 
