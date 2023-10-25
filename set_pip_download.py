@@ -43,7 +43,7 @@ def create_pip_yum():
 
     pip_path=f"{os.getenv('SystemDrive')}//Users//{os.environ['USERNAME']}//AppData//Roaming//pip" # 获取当前系统用户配置文件夹
     isexists= os.path.exists(pip_path)
-    print(isexists)
+    # print(isexists)
     if not isexists:
         os.mkdir(pip_path)
         with open(pip_path+'//pip.ini','w+') as fp:  #	覆盖写入
@@ -54,7 +54,7 @@ def create_pip_yum():
     else: 
         with open(pip_path+'//pip.ini','w+') as fp:  #	覆盖写入
             fp.write(pip_ini)
-
+        print(f'pip_yum源更新完成-->{yum_yuan_dict.get(input_num)[2]}源')
     input("please input any key to exit!")
 if __name__ == '__main__':
     create_pip_yum()
