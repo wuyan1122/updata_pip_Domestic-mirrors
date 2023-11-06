@@ -63,11 +63,10 @@ class CreateGui():
     def create_error_or_succeed_gui(self,radio_key):
         if  radio_key:
             trusted_host = re.search(r"//(.*?)/", self.selects[radio_key])  # 商品价格
-            pip_ini = f'''
-                [global]
-                timeout = 6000
-                index-url = {self.selects[radio_key]}
-                trusted-host = {trusted_host.group(1)}'''
+            pip_ini = f'''[global]
+timeout = 6000
+index-url = {self.selects[radio_key]}
+trusted-host = {trusted_host.group(1)}'''
             
             pip_path=f"{os.getenv('SystemDrive')}//Users//{os.environ['USERNAME']}//AppData//Roaming//pip" # 获取当前系统用户配置文件夹
             os.makedirs(pip_path,exist_ok='True')   # 创建存放pip.ini的文件夹 
