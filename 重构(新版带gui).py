@@ -54,10 +54,11 @@ class CreateGui():
                 break
             if event =='select':
                 pip_url = next((key for key, val in values.items() if val == True), None) # 是否选择了源 
-                if pip_url :
-                      self.create_error_or_succeed_gui(pip_url)  
-                else:
-                     self.create_error_or_succeed_gui(pip_url)  
+                self.create_error_or_succeed_gui(pip_url) 
+                # if pip_url :
+                #       self.create_error_or_succeed_gui(pip_url)  
+                # else:
+                #      self.create_error_or_succeed_gui(pip_url)  
 
     # 创建错误or成功 gui界面
     def create_error_or_succeed_gui(self,radio_key):
